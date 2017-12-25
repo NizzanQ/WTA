@@ -1,0 +1,78 @@
+<ion-header>
+    <ion-navbar hideBackButton start>
+        <ion-buttons>
+            <button ion-button menuToggle>
+                 <ion-icon name="menu"></ion-icon>
+                 </button>
+        </ion-buttons>
+        <ion-title>Profile</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-grid>
+        <ion-row>
+
+            <ion-col col-6>
+                <ion-item>
+
+                    <p> Age </p>
+                    {{ myPerson.age }}
+                    <br>
+
+
+                </ion-item>
+            </ion-col>
+
+            <ion-col col-6>
+                <ion-item>
+                    <p> Weight </p>
+                    {{ myPerson.w }}
+                    <br>
+
+                </ion-item>
+            </ion-col>
+
+        </ion-row>
+        <ion-row>
+            <ion-col col-6>
+                <ion-item>
+                    <p> Height </p>
+                    {{ myPerson.h }}
+                    <br>
+
+
+                </ion-item>
+            </ion-col>
+
+            <ion-col col-6>
+                <ion-item>
+                    <p>Gender</p>
+                    {{ myPerson.g }}
+                    <br>
+
+                </ion-item>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col col-12>
+                <ion-item>
+                    <p>Level of Activeness</p>
+                    <br> {{ myPerson.loatext }}
+                </ion-item>
+
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+
+    <button ion-button block (click)="editProfile()">
+Edit Profile
+</button>
+    <button ion-button block (click)="home()">
+        Back
+      </button>
+
+</ion-content>

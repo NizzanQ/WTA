@@ -1,0 +1,20 @@
+<ion-menu [content]="content">
+    <ion-header>
+        <ion-avatar item-start>
+            <ion-navbar hideBackButton>
+                <img src="assets/img/pic.png">
+
+            </ion-navbar>
+        </ion-avatar>
+    </ion-header>
+    <ion-content>
+        <ion-list>
+            <button ion-item menuClose *ngFor="let p of pages" (click)="openPage(p)">
+<ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>
+{{p.title}}
+  </button>
+        </ion-list>
+    </ion-content>
+
+</ion-menu>
+<ion-nav [root]="rootPage" #content swipeBackEnabled="true"></ion-nav>

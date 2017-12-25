@@ -1,0 +1,83 @@
+<!--
+  Generated template for the FoodPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>CHOOSE YOUR MEAL</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content padding>
+    <ion-item>
+
+        <ion-label stacked color="secondary">Nasi</ion-label>
+        <ion-select [(ngModel)]="m" multiple="true">
+            <ion-option value="0"> Tiada </ion-option>
+            <ion-option value="250"> 1 pinggan Nasi Ayam</ion-option>
+            <ion-option value="278">1 pinggan Nasi Lemak </ion-option>
+            <ion-option value="508">1 pinggan Nasi Dagang</ion-option>
+            <ion-option value="637">1 pinggan Nasi Goreng</ion-option>
+            <ion-option value="436">1 pinggan Nasi Minyak</ion-option>
+            <ion-option value="631">1 pinggan Nasi Goreng Kampung </ion-option>
+            <ion-option value="640">1 pinggan Nasi Goreng Ikan Masin</ion-option>
+            <ion-option value="605">1 pinggan Nasi Goreng Pattaya</ion-option>
+            <ion-option value="668">1 pinggan Nasi Goreng USA</ion-option>
+        </ion-select>
+    </ion-item>
+
+    <ion-item>
+        <ion-label stacked color="danger">Bubur & Pengat</ion-label>
+        <ion-select [(ngModel)]="b" multiple="true">
+            <ion-option value="0"> Tiada </ion-option>
+            <ion-option value="244">Kacang Hijau - 1 mangkuk </ion-option>
+            <ion-option value="101">Kacang Merah - 1 mangkuk </ion-option>
+            <ion-option value="210">Pisang Tanduk - 1 mangkuk </ion-option>
+            <ion-option value="246">Pisang Nangka - 1 mangkuk </ion-option>
+            <ion-option value="752">Rojak - 1 pinggan </ion-option>
+            <ion-option value="116">Pulut Hitam - 1 mangkuk </ion-option>
+            <ion-option value="315">Jagung - 1 mangkuk </ion-option>
+            <ion-option value="605">Keledek(Gula Merah) - 1 mangkuk </ion-option>
+        </ion-select>
+    </ion-item>
+
+    <ion-item>
+        <ion-label stacked color="danger">Minuman</ion-label>
+        <ion-select [(ngModel)]="f" multiple="true">
+            <ion-option value="0"> Tiada </ion-option>
+            <ion-option value="150"> Segelas Air Soya </ion-option>
+            <ion-option value="120"> Semangkuk Cendol </ion-option>
+            <ion-option value="160"> Secawan Milo Bersusu </ion-option>
+            <ion-option value="60"> Secawan Nescafe O </ion-option>
+            <ion-option value="130"> Secawan Teh Bersusu </ion-option>
+            <ion-option value="60"> Secawan Kopi O</ion-option>
+            <ion-option value="170"> Secawan Horlicks Bersusu </ion-option>
+        </ion-select>
+    </ion-item>
+    <br>
+    <button ion-button (click)="calculate(m,b,f)" full> Calculate YOUR CALORIES</button>
+    <ion-card>
+        <ion-card-header color="primary">
+            Total
+        </ion-card-header>
+        <ion-card-content>
+            <h2> {{this.total}}</h2>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header color="primary">
+            Ideal
+        </ion-card-header>
+        <ion-card-content>
+            <h2> {{this.myPerson | number : '1.2-2'}}</h2>
+
+        </ion-card-content>
+    </ion-card>
+
+</ion-content>

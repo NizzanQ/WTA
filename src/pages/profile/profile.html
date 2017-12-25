@@ -1,0 +1,57 @@
+<ion-header>
+
+    <ion-navbar hideBackButton color="danger">
+        <ion-title>profile</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-item>
+        <ion-input type="number" [(ngModel)]="age" placeholder="age"></ion-input>
+
+    </ion-item>
+
+    <ion-item>
+
+        <ion-input type="number" [(ngModel)]="w" placeholder="weight in kg"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-input type="number" [(ngModel)]="h" placeholder="height in cm"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Gender</ion-label>
+        <ion-select [(ngModel)]="g">
+            <ion-option value="FEMALE">Female</ion-option>
+            <ion-option value="MALE">Male</ion-option>
+        </ion-select>
+    </ion-item>
+
+    <ion-item>
+        <ion-label> Level of Activeness</ion-label>
+        <ion-select [(ngModel)]="loa">
+            <ion-option value="1.2">Little or No Exercise</ion-option>
+            <ion-option value="1.375">Exercise 1-3 days/week</ion-option>
+            <ion-option value="1.55">Exercise 3-5 days/week</ion-option>
+            <ion-option value="1.725">Exercise 6 - 7 days/week</ion-option>
+            <ion-option value="1.9">Heavy Exercise</ion-option>
+        </ion-select>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Date</ion-label>
+        <ion-datetime displayFormat="D-M-YY" min="2017" [(ngModel)]="myDate"></ion-datetime>
+    </ion-item>
+
+    <button ion-button block (click)="createPerson(age, w, h, g, loa, myDate)">
+  Save Details
+</button>
+
+    <button ion-button block (click)="cancel()">
+  Back
+</button>
+</ion-content>

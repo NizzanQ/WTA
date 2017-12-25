@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-navbar>
+        <ion-buttons>
+            <button ion-button menuToggle>
+                 <ion-icon name="menu"></ion-icon>
+                 </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content class="outer-content">
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+    <ion-list>
+        <button ion-button full>
+                Calculate
+               </button>
+
+        <ion-item *ngFor="let foods of foodList">
+
+            <ion-label>
+                <h2>Name: {{ foods.Nama }}</h2>
+                <h2>Calories: {{ foods.Kalori }}</h2>
+                <h2>Kuantiti: {{foods.Kuantiti}}</h2>
+            </ion-label>
+
+            <ion-checkbox checked="false" [(ngModel)]="foods.checked" value="foods.Kalori"></ion-checkbox>
+
+        </ion-item>
+    </ion-list>
+
+
+</ion-content>

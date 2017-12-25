@@ -1,0 +1,52 @@
+<ion-header>
+    <ion-navbar hideBackButton start>
+        <ion-buttons>
+            <button ion-button menuToggle>
+             <ion-icon md="md-menu"></ion-icon>
+             </button>
+        </ion-buttons>
+        <ion-buttons end>
+            <button ion-button (click)="logMeOut()">
+                 <ion-icon  md="md-power"></ion-icon>
+                 </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="masters">
+
+    <ion-card color="primary" text-center>
+        <ion-card-header>
+            Currrent BMI SCORE
+        </ion-card-header>
+        <ion-card-content>
+            <p style="font-weight: bold; font-size: 50px; color: white;" absolute-drag text-center>
+                {{ myPerson.bmi | number : '1.2-2'}}
+            </p>
+        </ion-card-content>
+    </ion-card>
+
+    <ion-card color="primary" text-center>
+        <ion-card-header>
+            IDEAL WEIGHT FOR YOU
+        </ion-card-header>
+        <ion-card-content>
+            <p style="font-weight: bold; font-size: 30px; color: white;" absolute-drag text-center>
+                {{ myPerson.hamwi | number : '1.2-2'}}KG<br>-<br> {{ myPerson.miller | number : '1.2-2'}}KG
+            </p>
+        </ion-card-content>
+    </ion-card>
+
+    <ion-card color="primary" text-center>
+        <ion-card-header>
+            IDEAL CALORIES NEEDED<br>PER DAY
+        </ion-card-header>
+        <ion-card-content>
+            <p style="font-weight: bold; font-size: 30px; color: white;" absolute-drag text-center>
+                {{ myPerson.tdee | number : '1.2-2'}}<br>CALORIES
+            </p>
+        </ion-card-content>
+    </ion-card>
+
+</ion-content>

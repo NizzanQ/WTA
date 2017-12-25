@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-navbar>
+        <ion-buttons>
+            <button ion-button menuToggle>
+                 <ion-icon name="menu"></ion-icon>
+                 </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content class="cards-bg social-cards">
+
+    <ion-card>
+        <ion-item>
+
+            <h2>Phewww , Your BMI Are {{this.myPerson}}</h2>
+        </ion-item>
+
+        <img src="assets/img/normal.png">
+
+        <ion-card-content>
+            <p>Normal or not , you should know some ways to be healthy in life! SCROLL DOWN!</p>
+        </ion-card-content>
+    </ion-card>
+    <button ion-button (click)="underweight()" color="secondary" full> Click if you are UNDERWEIGHT!</button>
+    <button ion-button (click)="normal()" full> Click if you are NORMAL</button>
+    <button ion-button (click)="overweight()" color="danger" full> Click if you are OVERWEIGHT!</button>
+    <button ion-button (click)="obese()" color="darc" full> Click if you are OBESE!!</button>
+</ion-content>
